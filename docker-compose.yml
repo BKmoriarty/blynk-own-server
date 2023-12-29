@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  blynk:
+    image: mpherg/blynk-server:latest
+    volumes: 
+      - 'blynk-data:/data' 
+    ports:
+      - "8080:8080" 
+      - "8441:8441"
+      - "9443:9443"
+    restart: always  
+
+volumes:
+  blynk-data:
